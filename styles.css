@@ -1,0 +1,75 @@
+*{
+    margin:auto;
+    padding: auto;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+   text-align: center;
+   height: 100vh;
+   width:100vh;
+   background: url("background.jpg") no-repeat center center / cover;
+}
+.container{
+    background-color: #066e85;
+    height: 300px;
+    width:500px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px rgb(238, 232, 232, 0.8)
+}
+
+.header h1{
+   background-color: antiquewhite;
+   color:#066e85;
+   border-radius: 10px;
+   width: 280px;
+   padding:5px;
+   box-shadow: 4px 4px 4px rgba(6, 110, 133, 0.4);
+   /* position:relative; */
+   margin-bottom:20px;
+   border: 1px solid #066e85;
+   font-family: 'Quicksand', sans-serif;
+}
+
+.container .quote{
+line-height: 35px;
+padding:25px;
+padding-top:70px;
+width:500px;
+height:220px;
+color:antiquewhite;
+font-family: 'GFS Didot', serif;
+font-size: 25px;
+font-weight: 500;
+}
+
+.container .person{
+    background-color: antiquewhite;
+    padding:10px;
+    /* position:static; */
+    font-size: 20px;
+    color:#066e85;
+    font-family: 'Libre Baskerville', serif;
+    
+    
+}
+
+div .button{
+    background-color: #066e85;
+    margin:50px;
+    padding: 10px;
+    border-radius: 5px;
+    font-family:'GFS Didot', serif ;
+    font-weight: 600;
+    font-size: 15px;
+    border: 1px solid antiquewhite;
+    color: antiquewhite;
+    box-shadow: 4px 4px 4px rgba(6, 110, 133, 1);
+
+}
+div .button:active{
+    background-color: gray;
+}
