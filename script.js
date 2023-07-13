@@ -13,8 +13,3 @@ author.innerText = allQuotes[random].author;
 }
 
 button.addEventListener("click", randomQuote);
-
-
-
-
-console.log(allQuotes.length);
