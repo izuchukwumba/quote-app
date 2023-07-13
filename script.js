@@ -13,9 +13,10 @@ import {allQuotes} from './quotes.js';
 //Selecting only quotes that are less or equal to 90 characters
 let shortQuotes = allQuotes.filter(obj => {
     let keys = Object.keys(obj);
-    let value = obj[keys[0]];
-    return value.length <= 90;
-    });
+    let quoteValue = obj[keys[0]];
+    let authorValue = obj[keys[1]];
+    return quoteValue.length <= 90 && authorValue.length > 24 && !authorValue.toLowerCase().includes('proverb');
+    });console.log(shortQuotes)
 
 // DOM Manipulation
 let author = document.querySelector(".person");
@@ -25,14 +26,23 @@ let signature = document.querySelector(".signature");
 
 // Generate a random quote and assign it, the author's name and signature to their respective html elements
 function randomQuote(){
-    let random = Math.floor(Math.random() * allQuotes.length);
-    quote.innerText = '"' + allQuotes[random].quote + '"';
-    author.innerText = allQuotes[random].author;
+    let random = Math.floor(Math.random() * shortQuotes.length);
+    quote.innerText = '"' + shortQuotes[random].quote + '"';
+    author.innerText = shortQuotes[random].author;
 
-    let fullName = author.innerText.split(" ");
+    let fullName = author.innerText.split(/[,\s.]+/);
     let firstInitial = fullName[0][0].toUpperCase();
-    let secondInitial = fullName[fullName.length-1][0].toUpperCase();
-    signature.innerText = firstInitial + "." + secondInitial;
+    let lastInitial = fullName[fullName.length-1][0].toUpperCase();
+    if(fullName.length == 1){
+        signature.innerText = firstInitial + ".";
+    }
+    else if(fullName.length == 2){
+        signature.innerText = firstInitial + "." + lastInitial;
+    }
+    else{
+        let middleInitial = fullName[1][0].toUpperCase();
+        signature.innerText = firstInitial + "." + middleInitial + "." + lastInitial;
+    }
 };
 
 document.addEventListener("DOMContentLoaded", randomQuote);
