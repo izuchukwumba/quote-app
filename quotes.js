@@ -1,3 +1,4 @@
+// Array of Quote Data
 let quotes = [
     {
         quote: "Be yourself; everyone else is already taken.",
@@ -1547,7 +1548,7 @@ let quotes = [
         ]
     }
 ];
-
+// Selecting just the needed data from the array (Quote and Author's name)
 const onlyQuoteAndAuthorName = quotes.map(obj => {
     const newObj = {};
     const keys = Object.keys(obj);
@@ -1555,12 +1556,11 @@ const onlyQuoteAndAuthorName = quotes.map(obj => {
     newObj[keys[1]] = obj[keys[1]];
     return newObj;
   });
-
+//Selecting quotes that are less or equal to 90 characters
 let shortQuotes = onlyQuoteAndAuthorName.filter(obj => {
     let keys = Object.keys(obj);
     let value = obj[keys[0]];
-  
-    return value.length < 90;
-  });
-  
+    return value.length <= 90;
+    });
+  //Exporting to the script.js file
 export const allQuotes = shortQuotes;
