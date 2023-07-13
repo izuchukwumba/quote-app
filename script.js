@@ -1,3 +1,4 @@
+//Importing quote data from quotes.js
 import {allQuotes} from './quotes.js';
 
 let author = document.querySelector(".person");
@@ -5,15 +6,16 @@ let quote = document.querySelector(".quote");
 let button = document.querySelector(".button");
 let signature = document.querySelector(".signature");
 
+// Generate a random quote and assign it, the author's name and signature to their respective html elements
 function randomQuote(){
-let random = Math.floor(Math.random() * allQuotes.length);
-quote.innerText = '"' + allQuotes[random].quote + '"';
-author.innerText = allQuotes[random].author;
+    let random = Math.floor(Math.random() * allQuotes.length);
+    quote.innerText = '"' + allQuotes[random].quote + '"';
+    author.innerText = allQuotes[random].author;
 
-let fullName = author.innerText.split(" ");
-let firstInitial = fullName[0][0].toUpperCase();
-let secondInitial = fullName[fullName.length-1][0].toUpperCase();
-signature.innerText = firstInitial + "." + secondInitial;
+    let fullName = author.innerText.split(" ");
+    let firstInitial = fullName[0][0].toUpperCase();
+    let secondInitial = fullName[fullName.length-1][0].toUpperCase();
+    signature.innerText = firstInitial + "." + secondInitial;
 };
 
 document.addEventListener("DOMContentLoaded", randomQuote);
