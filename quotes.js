@@ -1555,6 +1555,12 @@ const onlyQuoteAndAuthorName = quotes.map(obj => {
     newObj[keys[1]] = obj[keys[1]];
     return newObj;
   });
-  
 
-export const allQuotes = onlyQuoteAndAuthorName;
+let shortQuotes = onlyQuoteAndAuthorName.filter(obj => {
+    let keys = Object.keys(obj);
+    let value = obj[keys[0]];
+  
+    return value.length < 90;
+  });
+  
+export const allQuotes = shortQuotes;
