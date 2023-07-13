@@ -12,4 +12,5 @@ quote.innerText = '"' + allQuotes[random].quote + '"';
 author.innerText = allQuotes[random].author;
 }
 
+document.addEventListener("DOMContentLoaded", randomQuote);
 button.addEventListener("click", randomQuote);
