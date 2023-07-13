@@ -11,7 +11,7 @@ import {allQuotes} from './quotes.js';
 //   });
 
 //Selecting only quotes that are less or equal to 90 characters
-let shortQuotes = onlyQuoteAndAuthorName.filter(obj => {
+let shortQuotes = allQuotes.filter(obj => {
     let keys = Object.keys(obj);
     let value = obj[keys[0]];
     return value.length <= 90;
