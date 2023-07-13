@@ -15,8 +15,9 @@ let shortQuotes = allQuotes.filter(obj => {
     let keys = Object.keys(obj);
     let quoteValue = obj[keys[0]];
     let authorValue = obj[keys[1]];
-    return quoteValue.length <= 90 && authorValue.length <= 24 && !authorValue.toLowerCase().includes('proverb');
-    });console.log(shortQuotes)
+    return quoteValue.length <= 90 && authorValue.length <= 24 && !authorValue.toLowerCase().includes("proverb") && !authorValue.toLowerCase().includes("kanye");
+});
+console.log(shortQuotes.length)
 
 // DOM Manipulation
 let author = document.querySelector(".person");
