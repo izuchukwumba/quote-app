@@ -31,13 +31,14 @@ body{
    background-color: antiquewhite;
    color:#066e85;
    border-radius: 10px;
-   width: 250px;
+   width: 200px;
    padding:5px;
    box-shadow: 4px 4px 4px rgba(6, 110, 133, 0.4);
    margin-bottom:20px;
    margin-top:20px;
    border: 1px solid #066e85;
    font-family: 'Quicksand', sans-serif;
+   font-size: 20px;
 }
 
 .container .quote{
@@ -89,6 +90,9 @@ div .button:active{
     background: url("background.jpg") no-repeat center center / cover;
    }
 
+   .header h1{
+    font-size: auto;
+   }
    .container{
     height: 300px;
     width:500px;
