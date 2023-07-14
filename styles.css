@@ -11,7 +11,7 @@ body{
     justify-content: center;
     text-align: center;
     width:100%;
-    background-image: url("background-mobile2.jpg");
+    background-image: url("images/background-mobile2.jpg");
     background-size: 100%;
     background-position: top;
     background-repeat: no-repeat;
@@ -68,9 +68,8 @@ body{
     color:antiquewhite;
 }
 /* Style Rule for Button */
-div .button{
-    background-color: #066e85;
-    margin:50px;
+.btn{
+    margin:20px 10px 10px 20px;
     padding: 10px;
     border-radius: 5px;
     font-family:'GFS Didot', serif ;
@@ -81,10 +80,40 @@ div .button{
     box-shadow: 4px 4px 4px rgba(6, 110, 133, 1);
 
 }
-div .button:active{
-    background-color: gray;
+
+.btn-newquote{
+    background-color: #066e85;
 }
 
+.btn-tweet-copy{
+    background-color: antiquewhite;
+}
+
+.btn-tweet,.btn-copy{
+    color:#066e85;
+    width: 132.117px
+}
+.btn-tweet{
+    margin-right: 5px;
+    margin-top:50px;
+}
+.btn-text{
+    padding-left: 10px;
+    font-size: 12px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 900;
+    letter-spacing: 1.1px;
+
+}
+
+.btn:active{
+    background-color: gray;
+}
+.fa-shake.slow{
+    animation-duration: 100s;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear;
+}
 
 /* Desktop Styles*/
 @media (min-width: 768px) and (max-width: 1300px){
@@ -92,14 +121,15 @@ div .button:active{
    body{
         height: 100vh;
         width:100vh;
-        background: url("background.jpg") no-repeat center center / cover;
+        background: url("images/background.jpg") no-repeat center center / cover;
    }
 
    .header h1{
         font-size: auto;
+        margin-top: 15px;
    }
    .container{
-        height: 300px;
+        height: 330px;
         width:500px;
    }
 
@@ -114,5 +144,14 @@ div .button:active{
     .container .person{
         padding:10px;
         font-size: 20px;
+    }
+    .signature{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding-top:10px;
+    }
+    .btn-tweet{
+        margin-right: 50px;
+        margin-top:30px;
     }
   }
