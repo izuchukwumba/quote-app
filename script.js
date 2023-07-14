@@ -38,7 +38,7 @@ function randomQuote(){
         signature.innerText = firstInitial + "." + middleInitial + "." + lastInitial;
     };
 
-    window.quoteAndAuthorTweet = quote.innerText + "\n" + "\n" + "-" + " " + author.innerText;
+    window.quoteAndAuthorTweet = `${quote.innerText}\n\n - ${author.innerText}`;
 
     if (copyText.innerText === 'Copied!'){
       copyText.innerText = 'Copy Quote'
@@ -47,9 +47,9 @@ function randomQuote(){
 
 
 function tweetQuote() {
-  const twitterUrl = `https://twitter.com/intent/tweet?text=${quoteAndAuthorTweet}`;
+  let encodedQuote = encodeURIComponent(quoteAndAuthorTweet)
+  const twitterUrl = `https://twitter.com/intent/tweet?text=${encodedQuote}`;
   window.open(twitterUrl, "_blank");
-  console.log(twitterUrl)
 }
 
 function copyQuote(){
@@ -61,7 +61,3 @@ document.addEventListener("DOMContentLoaded", randomQuote);
 button.addEventListener("click", randomQuote);
 tweetButton.addEventListener("click", tweetQuote);
 copyButton.addEventListener("click", copyQuote);
-
-
-
-console.log(window.getComputedStyle(copyButton).getPropertyValue('width'));
