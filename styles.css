@@ -117,7 +117,7 @@ body{
 }
 
 /* Desktop Styles*/
-@media (min-width: 768px) and (max-width: 1300px){
+@media (min-width: 768px) and (max-width: 2400px){
 
    body{
         height: 100vh;
