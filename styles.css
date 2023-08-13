@@ -18,6 +18,7 @@ body{
     background-color: antiquewhite;
 }
 .container{
+    align-self: center;
     background-color: #066e85;
     height: 300px;
     width:300px;
