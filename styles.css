@@ -112,6 +112,10 @@ body{
 .btn:active{
     background-color: gray;
 }
+.btn:hover{
+    cursor:pointer;
+}
+
 .fa-shake.slow{
     animation-duration: 100s;
     animation-iteration-count: infinite;
